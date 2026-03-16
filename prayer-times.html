@@ -1,0 +1,365 @@
+<!-- prayer-times.html - PREMIUM PRAYER TIMES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prayer-card { transition: all 0.3s ease; }
+        .prayer-card.active { 
+            background: linear-gradient(135deg, #1E3A4C 0%, #4A9B9B 100%); 
+            color: white; 
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(30,58,76,0.3);
+        }
+        .prayer-card.active .prayer-icon { color: #D4AF37; }
+        .countdown-box { 
+            background: linear-gradient(135deg, #1E3A4C 0%, #4A9B9B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .countdown-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Premium Prayer Times Display -->
+    <section class="pt-24 pb-12 bg-isbc-navy text-white min-h-screen">
+        <div class="container mx-auto px-6">
+            
+            <!-- Header with Date -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-5xl font-bold mb-2 arabic-text">مواقيت الصلاة</h1>
+                <p class="text-xl opacity-90" id="current-date">Ramadan 15, 1447 | March 4, 2026</p>
+                <p class="text-3xl font-mono mt-2" id="current-time">09:56 AM</p>
+            </div>
+
+            <!-- Main Prayer Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8" id="prayer-cards">
+                <!-- Filled by JavaScript -->
+            </div>
+
+            <!-- Countdown to Next Iqama -->
+            <div class="countdown-box rounded-3xl p-8 max-w-2xl mx-auto text-center mb-8 relative z-10">
+                <p class="text-lg mb-2 opacity-90">Time remaining until iqamatul-<span id="next-iqama-name" class="font-bold text-isbc-gold">Dhuhr</span> is</p>
+                <div class="text-5xl md:text-6xl font-mono font-bold text-isbc-gold mb-4" id="iqama-countdown">02:48:33</div>
+                <div class="bg-isbc-gold/20 rounded-2xl p-4 mt-4">
+                    <p class="font-bold text-lg"><i class="fas fa-info-circle mr-2"></i>Next Jumu'ah Prayers: <span id="next-friday-date">March 6th</span></p>
+                    <p class="text-isbc-gold font-bold text-xl">KHUTBA starts at 1:40 PM</p>
+                </div>
+            </div>
+
+            <!-- Full Monthly Schedule -->
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mt-12">
+                <div class="bg-isbc-teal text-white p-6 flex justify-between items-center">
+                    <h2 class="text-2xl font-bold">March 2026 Prayer Schedule</h2>
+                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Ramadan 1447 AH</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-isbc-navy text-white text-sm">
+                            <tr>
+                                <th class="px-4 py-4">Date</th>
+                                <th class="px-4 py-4 text-center">Fajr<br><span class="text-xs opacity-75">Azan | Iqama</span></th>
+                                <th class="px-4 py-4 text-center">Sunrise</th>
+                                <th class="px-4 py-4 text-center">Dhuhr<br><span class="text-xs opacity-75">Azan | Iqama</span></th>
+                                <th class="px-4 py-4 text-center">Asr<br><span class="text-xs opacity-75">Azan | Iqama</span></th>
+                                <th class="px-4 py-4 text-center">Maghrib<br><span class="text-xs opacity-75">Azan | Iqama</span></th>
+                                <th class="px-4 py-4 text-center">Isha<br><span class="text-xs opacity-75">Azan | Iqama</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="prayer-table" class="text-sm">
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Jumu'ah Notice -->
+            <div class="bg-isbc-gold/20 border-2 border-isbc-gold rounded-2xl p-6 mt-8 text-center">
+                <h3 class="text-2xl font-bold text-isbc-gold mb-2"><i class="fas fa-mosque mr-2"></i>Jumu'ah Prayer</h3>
+                <p class="text-lg">Every Friday | Khutba: 1:40 PM | Prayer: 2:00 PM</p>
+                <p class="text-sm mt-2 opacity-75">Led by Imam & Khateeb Sheikh Adnan Al-Abiyat</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+
+    <script>
+        // Prayer data for March 2026 (Ramadan)
+        const prayerData = [
+            { date: 'Wed 04', day: 'Ramadan 15', fajrA: '5:19 AM', fajrI: '5:34 AM', sunrise: '6:46 AM', dhuhrA: '12:23 PM', dhuhrI: '12:45 PM', asrA: '3:24 PM', asrI: '4:00 PM', maghribA: '6:00 PM', maghribI: '6:05 PM', ishaA: '7:30 PM', ishaI: '7:45 PM' },
+            { date: 'Thu 05', day: 'Ramadan 16', fajrA: '5:17 AM', fajrI: '5:32 AM', sunrise: '6:44 AM', dhuhrA: '12:23 PM', dhuhrI: '12:45 PM', asrA: '3:25 PM', asrI: '4:00 PM', maghribA: '6:02 PM', maghribI: '6:07 PM', ishaA: '7:32 PM', ishaI: '7:45 PM' },
+            { date: 'Fri 06', day: 'Ramadan 17', fajrA: '5:15 AM', fajrI: '5:30 AM', sunrise: '6:42 AM', dhuhrA: '12:22 PM', dhuhrI: '12:40 PM', asrA: '3:26 PM', asrI: '4:00 PM', maghribA: '6:03 PM', maghribI: '6:08 PM', ishaA: '7:33 PM', ishaI: '7:45 PM' },
+            { date: 'Sat 07', day: 'Ramadan 18', fajrA: '5:13 AM', fajrI: '5:28 AM', sunrise: '6:40 AM', dhuhrA: '12:22 PM', dhuhrI: '12:45 PM', asrA: '3:27 PM', asrI: '4:00 PM', maghribA: '6:05 PM', maghribI: '6:10 PM', ishaA: '7:35 PM', ishaI: '7:45 PM' },
+            { date: 'Sun 08', day: 'Ramadan 19', fajrA: '5:11 AM', fajrI: '5:26 AM', sunrise: '6:38 AM', dhuhrA: '12:22 PM', dhuhrI: '12:45 PM', asrA: '3:28 PM', asrI: '4:00 PM', maghribA: '6:06 PM', maghribI: '6:11 PM', ishaA: '7:36 PM', ishaI: '7:45 PM' },
+        ];
+
+        // Today's prayers for cards
+        const todayPrayers = [
+            { name: 'Fajr', arabic: 'فجر', azan: '5:19 AM', iqama: '5:34 AM', icon: 'fa-sun' },
+            { name: 'Sunrise', arabic: 'شروق', azan: '6:46 AM', iqama: '-', icon: 'fa-cloud-sun' },
+            { name: 'Dhuhr', arabic: 'ظهر', azan: '12:23 PM', iqama: '12:45 PM', icon: 'fa-sun' },
+            { name: 'Asr', arabic: 'عصر', azan: '3:24 PM', iqama: '4:00 PM', icon: 'fa-cloud' },
+            { name: 'Maghrib', arabic: 'مغرب', azan: '6:00 PM', iqama: '6:05 PM', icon: 'fa-moon' },
+            { name: 'Isha', arabic: 'عشاء', azan: '7:30 PM', iqama: '7:45 PM', icon: 'fa-star' }
+        ];
+
+        // Helper: parse 12-hour time strings like "5:19 AM" into seconds since midnight
+        function parseTimeToSeconds(timeStr) {
+            const [time, period] = timeStr.split(' ');
+            const [hourStr, minuteStr] = time.split(':');
+            let hour = Number(hourStr);
+            const minute = Number(minuteStr);
+            if (period === 'PM' && hour !== 12) hour += 12;
+            if (period === 'AM' && hour === 12) hour = 0;
+            return hour * 3600 + minute * 60;
+        }
+
+        // Determine which prayer is "current" based on the current time
+        function getCurrentPrayerIndex() {
+            const now = new Date();
+            const nowSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+
+            const prayerSeconds = todayPrayers.map(p => parseTimeToSeconds(p.azan));
+
+            // If before Fajr, highlight Fajr. If after Isha, highlight Isha.
+            if (nowSeconds < prayerSeconds[0]) return 0;
+            for (let i = 0; i < prayerSeconds.length - 1; i++) {
+                if (nowSeconds >= prayerSeconds[i] && nowSeconds < prayerSeconds[i + 1]) {
+                    return i;
+                }
+            }
+            return prayerSeconds.length - 1;
+        }
+
+        // Render prayer cards
+        const cardsContainer = document.getElementById('prayer-cards');
+        const prayerCards = [];
+        todayPrayers.forEach(prayer => {
+            const card = document.createElement('div');
+            card.className = `prayer-card bg-white rounded-2xl p-6 text-center text-isbc-navy`;
+            card.setAttribute('data-prayer', prayer.name.toLowerCase());
+            card.innerHTML = `
+                <i class="fas ${prayer.icon} prayer-icon text-3xl text-isbc-teal mb-3 block"></i>
+                <h3 class="font-bold text-lg">${prayer.name}</h3>
+                <p class="arabic-text text-sm opacity-75 mb-2">${prayer.arabic}</p>
+                <p class="text-2xl font-bold text-isbc-navy">${prayer.azan}</p>
+                <p class="text-xs text-gray-500 mt-1">Iqama: ${prayer.iqama}</p>
+            `;
+            cardsContainer.appendChild(card);
+            prayerCards.push(card);
+        });
+
+        function highlightCurrentPrayer() {
+            const currentIndex = getCurrentPrayerIndex();
+            prayerCards.forEach((card, index) => {
+                const icon = card.querySelector('.prayer-icon');
+                const timeText = card.querySelector('.text-2xl');
+                const iqamaText = card.querySelector('.text-xs');
+
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                    card.classList.remove('text-isbc-navy');
+                    icon.classList.remove('text-isbc-teal');
+                    icon.classList.add('text-isbc-gold');
+                    timeText.classList.remove('text-isbc-navy');
+                    timeText.classList.add('text-white');
+                    iqamaText.classList.remove('text-gray-500');
+                    iqamaText.classList.add('text-gray-200');
+                } else {
+                    card.classList.remove('active');
+                    card.classList.add('text-isbc-navy');
+                    icon.classList.remove('text-isbc-gold');
+                    icon.classList.add('text-isbc-teal');
+                    timeText.classList.remove('text-white');
+                    timeText.classList.add('text-isbc-navy');
+                    iqamaText.classList.remove('text-gray-200');
+                    iqamaText.classList.add('text-gray-500');
+                }
+            });
+        }
+
+        highlightCurrentPrayer();
+        setInterval(highlightCurrentPrayer, 30 * 1000);
+
+        // Populate table
+        const tableBody = document.getElementById('prayer-table');
+        prayerData.forEach((day, index) => {
+            const row = document.createElement('tr');
+            row.className = index === 0 ? 'bg-isbc-gold/20 font-bold' : (index % 2 === 0 ? 'bg-gray-50' : 'bg-white');
+            row.innerHTML = `
+                <td class="px-4 py-4 border-b">
+                    <div class="font-bold text-isbc-navy">${day.date}</div>
+                    <div class="text-xs text-isbc-teal">${day.day}</div>
+                </td>
+                <td class="px-4 py-4 border-b text-center">
+                    <div class="text-isbc-navy">${day.fajrA}</div>
+                    <div class="text-xs text-gray-500">${day.fajrI}</div>
+                </td>
+                <td class="px-4 py-4 border-b text-center text-gray-600">${day.sunrise}</td>
+                <td class="px-4 py-4 border-b text-center">
+                    <div class="text-isbc-teal font-bold">${day.dhuhrA}</div>
+                    <div class="text-xs text-gray-500">${day.dhuhrI}</div>
+                </td>
+                <td class="px-4 py-4 border-b text-center">
+                    <div class="text-isbc-navy">${day.asrA}</div>
+                    <div class="text-xs text-gray-500">${day.asrI}</div>
+                </td>
+                <td class="px-4 py-4 border-b text-center">
+                    <div class="text-isbc-gold font-bold text-lg">${day.maghribA}</div>
+                    <div class="text-xs text-gray-500">${day.maghribI}</div>
+                </td>
+                <td class="px-4 py-4 border-b text-center">
+                    <div class="text-isbc-navy">${day.ishaA}</div>
+                    <div class="text-xs text-gray-500">${day.ishaI}</div>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        // Update current time and date
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            
+            // Update date
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            
+            // Calculate Islamic date (approximate)
+            const islamicDate = calculateIslamicDate(now);
+            document.getElementById('current-date').textContent = `${islamicDate} | ${formattedDate}`;
+            
+            // Update next Friday date
+            const nextFriday = getNextFriday(now);
+            const fridayOptions = { month: 'long', day: 'numeric' };
+            document.getElementById('next-friday-date').textContent = nextFriday.toLocaleDateString('en-US', fridayOptions);
+        }
+        
+        // Get next Friday date
+        function getNextFriday(date) {
+            const dayOfWeek = date.getDay(); // 0 = Sunday, 5 = Friday
+            const daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+            const nextFriday = new Date(date);
+            nextFriday.setDate(date.getDate() + (daysUntilFriday === 0 ? 7 : daysUntilFriday));
+            return nextFriday;
+        }
+        
+        // Approximate Islamic date calculation
+        function calculateIslamicDate(date) {
+            // Ramadan 1, 1447 starts on February 18, 2026
+            const ramadanStart = new Date(2026, 1, 18); // February 18, 2026
+            const daysSinceRamadanStart = Math.floor((date - ramadanStart) / (1000 * 60 * 60 * 24));
+            
+            const ramadanDay = daysSinceRamadanStart + 1;
+            
+            return `Ramadan ${ramadanDay}, 1447`;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Iqama countdown
+        function updateIqamaCountdown() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+            const currentSecond = now.getSeconds();
+            const currentTime = currentHour * 3600 + currentMinute * 60 + currentSecond;
+            
+            // Iqama times in seconds
+            const iqamas = [
+                { name: 'Fajr', time: 5 * 3600 + 34 * 60 },
+                { name: 'Dhuhr', time: 12 * 3600 + 45 * 60 },
+                { name: 'Asr', time: 16 * 3600 + 0 * 60 },
+                { name: 'Maghrib', time: 18 * 3600 + 5 * 60 },
+                { name: 'Isha', time: 19 * 3600 + 45 * 60 }
+            ];
+            
+            let nextIqama = iqamas[0];
+            let nextTime = iqamas[0].time + 24 * 3600;
+            
+            for (let i = 0; i < iqamas.length; i++) {
+                if (currentTime < iqamas[i].time) {
+                    nextIqama = iqamas[i];
+                    nextTime = iqamas[i].time;
+                    break;
+                }
+            }
+            
+            let diff = nextTime - currentTime;
+            const hours = Math.floor(diff / 3600);
+            diff %= 3600;
+            const minutes = Math.floor(diff / 60);
+            const seconds = diff % 60;
+            
+            document.getElementById('next-iqama-name').textContent = nextIqama.name;
+            document.getElementById('iqama-countdown').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        
+        setInterval(updateIqamaCountdown, 1000);
+        updateIqamaCountdown();
+    </script>
+</body>
+</html>

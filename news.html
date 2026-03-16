@@ -1,0 +1,184 @@
+<!-- news.html - NEWS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates | ISBC Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'islamic-green': '#0D5C46',
+                        'islamic-gold': '#D4AF37',
+                        'deep-teal': '#1B4D3E',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="services.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Services</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-islamic-green text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">News & Updates</h1>
+            <p class="text-xl opacity-90">Stay informed with the latest from Masjid Al-Hidayah</p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <!-- School Registration -->
+            <article id="school" class="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://theisbc.ca/images/school-2025.jpg" alt="Islamic School" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <i class="far fa-calendar mr-2"></i> July 4, 2025
+                        <span class="mx-2">•</span>
+                        <span class="text-islamic-gold font-semibold">Education</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-islamic-green mb-4">Al-Hidayah Islamic School 2025-2026 Programs</h2>
+                    <div class="prose text-gray-700 space-y-4">
+                        <p class="text-lg font-semibold text-islamic-green">Registrations are Now Open!</p>
+                        <p>Give Your Child the Gift of Faith, Knowledge, and Strength on Weekends!</p>
+                        
+                        <h3 class="text-xl font-bold text-islamic-green mt-6">Weekend Islamic School (Grades K-7)</h3>
+                        <p>Saturdays and Sundays from 10 AM to 2 PM</p>
+                        <p>Imagine your child spending their weekends not just learning, but truly growing – in faith, knowledge, and character. Our Weekend Islamic School is designed for children aged 5-12, offering a unique blend of spiritual learning and active engagement.</p>
+                        
+                        <h4 class="font-bold mt-4">Program includes:</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Dedicated time to Read and Memorize the Qur'an, fostering a deep spiritual bond</li>
+                            <li>Expert instruction in Qur'an Tajweed, perfecting their recitation</li>
+                            <li>Comprehensive Islamic Studies to build a strong moral compass</li>
+                            <li>Foundational Arabic Language skills for a deeper understanding of Islam</li>
+                            <li>Engaging Physical Education and other exciting activities that build discipline, confidence, and physical well-being</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-islamic-green mt-6">El Kutab School (Ages 13-17)</h3>
+                        <p><strong>Girls:</strong> Sundays 10 AM - 2 PM<br>
+                        <strong>Boys:</strong> Sundays 10 AM - 2 PM</p>
+                        <p>Designed for youth to grow in faith, knowledge, and character with Qur'an reading, Tajweed, and Arabic Language.</p>
+
+                        <div class="bg-islamic-gold/10 p-4 rounded-lg mt-6">
+                            <p class="font-bold">To request school books, visit Al-Hidayah's Shop</p>
+                        </div>
+
+                        <a href="#" class="inline-block mt-4 bg-islamic-green text-white px-6 py-3 rounded-full font-bold hover:bg-deep-teal transition-all">REGISTER NOW</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ramadan Iftar -->
+            <article class="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://theisbc.ca/images/ramadan-iftar.jpg" alt="Ramadan Iftar" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <i class="far fa-calendar mr-2"></i> February 10, 2026
+                        <span class="mx-2">•</span>
+                        <span class="text-islamic-gold font-semibold">Ramadan</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-islamic-green mb-4">Ramadan Iftar Gatherings - Now Open!</h2>
+                    <p class="text-gray-700 mb-4">Giving Iftar is now open! Every contribution, big or small, brings us together to share in the blessings of Ramadan. Let's unite in giving, breaking our fast as one community, and strengthening our bonds in this sacred month.</p>
+                    <div class="flex gap-4 mt-6">
+                        <span class="bg-islamic-green text-white px-4 py-2 rounded-full text-sm"><i class="fas fa-calendar-day mr-2"></i>Fridays</span>
+                        <span class="bg-islamic-green text-white px-4 py-2 rounded-full text-sm"><i class="fas fa-calendar-week mr-2"></i>Saturdays</span>
+                    </div>
+                    <a href="donate.html" class="inline-block mt-6 text-islamic-green font-bold hover:text-islamic-gold">Donate to Iftar →</a>
+                </div>
+            </article>
+
+            <!-- Ramadan Parking -->
+            <article class="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <i class="far fa-calendar mr-2"></i> February 8, 2026
+                        <span class="mx-2">•</span>
+                        <span class="text-islamic-gold font-semibold">Important Notice</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-islamic-green mb-4">Ramadan Parking Issue</h2>
+                    <p class="text-gray-700 mb-4">Parking problems are expected throughout the month due to the increased attendance during this blessed month. Please be courteous to others and observe the following guidelines:</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Arrive early to secure parking</li>
+                        <li>Carpool when possible</li>
+                        <li>Respect neighboring businesses and residences</li>
+                        <li>Do not block driveways or fire hydrants</li>
+                        <li>Follow traffic volunteer instructions</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Volunteer Registration -->
+            <article class="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <i class="far fa-calendar mr-2"></i> July 20, 2025
+                        <span class="mx-2">•</span>
+                        <span class="text-islamic-gold font-semibold">Volunteer</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-islamic-green mb-4">Volunteer Registration Form</h2>
+                    <p class="text-lg text-gray-700 mb-4 font-semibold">Be Part of Something Meaningful</p>
+                    <p class="text-gray-700 mb-4">At Masjid Al-Hidayah, our volunteers are the heart of our community. Whether you're lending a hand at Jumu'ah, helping during Ramadan, supporting our events, or assisting with day-to-day operations, your contribution makes a real difference.</p>
+                    <a href="services.html#volunteer" class="inline-block mt-4 bg-islamic-green text-white px-6 py-3 rounded-full font-bold hover:bg-deep-teal transition-all">Register to Volunteer</a>
+                </div>
+            </article>
+
+            <!-- Masjid Appeal -->
+            <article class="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <i class="far fa-calendar mr-2"></i> March 8, 2025
+                        <span class="mx-2">•</span>
+                        <span class="text-islamic-gold font-semibold">Fundraiser</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-islamic-green mb-4">Masjid Appeal - 2025</h2>
+                    <p class="text-gray-700 mb-4">Alhamdulillah! Thanks to your generous support in the past, the renovation of the main wudu area has been completed. We continue to need your support for ongoing maintenance and improvements to serve the community better.</p>
+                    <a href="donate.html" class="inline-block mt-4 text-islamic-green font-bold hover:text-islamic-gold">Support the Masjid →</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

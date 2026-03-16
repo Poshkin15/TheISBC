@@ -1,0 +1,185 @@
+<!-- programs.html - RELIGIOUS PROGRAMS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family+Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-isbc-navy text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Religious Programs</h1>
+            <p class="text-xl opacity-90">Daily prayers, Ramadan programs, and community activities</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Daily Prayers -->
+            <div class="bg-isbc-light rounded-3xl p-8 md:p-12 mb-12">
+                <h2 class="text-3xl font-bold text-isbc-navy mb-6"><i class="fas fa-mosque text-isbc-teal mr-3"></i>Daily & Friday Prayers</h2>
+                <p class="text-gray-700 mb-6 text-lg">Led by Imam & Khateeb <strong>Sheikh Adnan Al-Abiyat</strong>. Open to men and women with separate prayer facilities.</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <h3 class="font-bold text-isbc-navy text-xl mb-3">Daily Prayers</h3>
+                        <p class="text-gray-600 mb-4">Five daily prayers held in congregation. Check prayer times for current schedule.</p>
+                        <a href="prayer-times.html" class="text-isbc-teal font-bold hover:underline">View Prayer Times →</a>
+                    </div>
+                    <div class="bg-isbc-gold/20 border-2 border-isbc-gold p-6 rounded-2xl">
+                        <h3 class="font-bold text-isbc-navy text-xl mb-3"><i class="fas fa-star mr-2"></i>Jumu'ah Prayer</h3>
+                        <p class="text-gray-700 mb-2"><strong>Khutba:</strong> 12:40 PM</p>
+                        <p class="text-gray-700 mb-4"><strong>Prayer:</strong> 1:00 PM</p>
+                        <p class="text-sm text-gray-600">Every Friday • Open to all</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ramadan Programs -->
+            <div class="bg-isbc-navy rounded-3xl p-8 md:p-12 text-white mb-12">
+                <h2 class="text-3xl font-bold mb-8"><i class="fas fa-moon text-isbc-gold mr-3"></i>Ramadan Programs</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-utensils text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Iftar Gatherings</h3>
+                        <p class="opacity-90 mb-4">Community Iftar every Friday & Saturday during Ramadan.</p>
+                        <a href="donate.html" class="text-isbc-gold font-bold hover:underline">Support Iftar →</a>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-pray text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Taraweeh Prayers</h3>
+                        <p class="opacity-90 mb-4">After Isha prayer daily during Ramadan. Check calendar for times.</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-trophy text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Qur'an Competition</h3>
+                        <p class="opacity-90 mb-4">For ages 7-18. Memorization circles Sundays between Dhuhr & Asr.</p>
+                    </div>
+                </div>
+
+                <!-- Competition Details -->
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 mt-6">
+                    <h3 class="text-xl font-bold mb-4 text-isbc-gold">Qur'an Memorization Competition Details</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <h4 class="font-bold mb-2">Level 1 (Ages 7-11)</h4>
+                            <p class="text-sm">Surah Al-Fath</p>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <h4 class="font-bold mb-2">Level 2 (Ages 7-14)</h4>
+                            <p class="text-sm">Surah Al-Ahqaf, Muhammad, Qaf</p>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <h4 class="font-bold mb-2">Level 3 (Ages 7-18)</h4>
+                            <p class="text-sm">Juz' Al-Ahqaf</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm opacity-75">Competition held on 29th Ramadan • Prizes for winners</p>
+                    <a href="#" class="inline-block mt-4 bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all">Register: bit.ly/quran-memorization-contest</a>
+                </div>
+            </div>
+
+            <!-- Arabic & Islamic Schools -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white border-2 border-isbc-teal/20 rounded-3xl p-8">
+                    <span class="bg-isbc-teal text-white px-4 py-1 rounded-full text-sm font-bold">Saturday</span>
+                    <h2 class="text-2xl font-bold text-isbc-navy mt-4 mb-4">Saturday School</h2>
+                    <p class="text-gray-600 mb-4">For non-Arabic speakers • Ages 5+</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li><i class="fas fa-check text-isbc-teal mr-2"></i>Islamic education & culture</li>
+                        <li><i class="fas fa-check text-isbc-teal mr-2"></i>10 AM - 1 PM</li>
+                    </ul>
+                    <div class="bg-isbc-light p-4 rounded-xl mb-4">
+                        <p class="text-sm font-bold text-isbc-navy">Fees:</p>
+                        <p class="text-sm">First child: $70/month | Second: $60/month | Additional: $50/month</p>
+                    </div>
+                    <a href="mailto:islamicschool@theisbc.ca" class="text-isbc-teal font-bold hover:underline">islamicschool@theisbc.ca</a>
+                </div>
+
+                <div class="bg-white border-2 border-isbc-gold/20 rounded-3xl p-8">
+                    <span class="bg-isbc-gold text-isbc-navy px-4 py-1 rounded-full text-sm font-bold">Sunday</span>
+                    <h2 class="text-2xl font-bold text-isbc-navy mt-4 mb-4">Sunday School</h2>
+                    <p class="text-gray-600 mb-4">For Arabic speakers</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li><i class="fas fa-check text-isbc-gold mr-2"></i>Girls: Ages 3-15 | Boys: Ages 3-6</li>
+                        <li><i class="fas fa-check text-isbc-gold mr-2"></i>10 AM - 1 PM</li>
+                        <li><i class="fas fa-check text-isbc-gold mr-2"></i>Qur'an, Islamic studies, Noorani Qaida</li>
+                    </ul>
+                    <div class="bg-isbc-gold/10 p-4 rounded-xl mb-4">
+                        <p class="text-sm font-bold text-isbc-navy">Fee: $25/month</p>
+                    </div>
+                    <a href="mailto:kottabalatfal@theisbc.ca" class="text-isbc-gold font-bold hover:underline">kottabalatfal@theisbc.ca</a>
+                </div>
+            </div>
+
+            <!-- Women's Program -->
+            <div class="bg-gradient-to-r from-isbc-teal/10 to-isbc-gold/10 rounded-3xl p-8 mt-12 border-2 border-isbc-teal/20">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-female text-4xl text-isbc-teal mr-4"></i>
+                    <div>
+                        <h2 class="text-2xl font-bold text-isbc-navy">Women's Weekly Gathering</h2>
+                        <p class="text-gray-600">Weekly Islamic reflection in Arabic</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <span class="bg-white px-4 py-2 rounded-full text-sm font-bold text-isbc-navy"><i class="far fa-clock mr-2"></i>Every Saturday after Dhuhr</span>
+                    <span class="bg-white px-4 py-2 rounded-full text-sm font-bold text-isbc-navy"><i class="fas fa-map-marker-alt mr-2"></i>Women's prayer area</span>
+                    <span class="bg-isbc-teal text-white px-4 py-2 rounded-full text-sm font-bold">Open to all sisters</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+</body>
+</html>

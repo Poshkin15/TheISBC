@@ -1,0 +1,186 @@
+<!-- about.html - ABOUT PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family+Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-isbc-navy text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Masjid Al-Hidayah</h1>
+            <p class="text-xl opacity-90">Serving the community since 1995</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <!-- History -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-isbc-navy mb-6">Our History</h2>
+                <div class="space-y-4 text-gray-700">
+                    <p>Established in 1995 as The Tri-City Islamic Centre, Masjid Al-Hidayah (ISBC) originally operated from a 500 sq. ft. rented office. Through the dedication of our community and the blessings of Allah, we have grown to serve Muslim families across seven cities in the Greater Vancouver Area.</p>
+                    <p>Our permanent mosque building officially opened on <strong>August 15, 2003</strong>, designed by award-winning Muslim architect <strong>Studio Senbel Architecture + Design</strong>. The building draws inspiration from traditional Islamic architecture while being adapted for the British Columbia climate.</p>
+                </div>
+            </div>
+
+            <!-- Mosque Photo -->
+            <div class="mb-12">
+                <img src="image.png" alt="Masjid Al-Hidayah" class="w-full rounded-3xl shadow-lg">
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <div class="text-4xl font-bold text-isbc-teal mb-2">1995</div>
+                    <div class="text-sm text-gray-600">Established</div>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <div class="text-4xl font-bold text-isbc-teal mb-2">7</div>
+                    <div class="text-sm text-gray-600">Cities Served</div>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <div class="text-4xl font-bold text-isbc-teal mb-2">2003</div>
+                    <div class="text-sm text-gray-600">Mosque Opened</div>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center -ml-4">
+                    <div class="text-4xl font-bold text-isbc-teal mb-2 -ml-2">870635968</div>
+                    <div class="text-sm text-gray-600">Charity No.</div>
+                </div>
+            </div>
+
+            <!-- Mosque Features -->
+            <div class="bg-isbc-navy rounded-3xl p-8 text-white mb-12">
+                <h2 class="text-3xl font-bold mb-8"><i class="fas fa-mosque text-isbc-gold mr-3"></i>Masjid Amenities</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-door-open text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Separate Entrances</h4>
+                            <p class="text-sm opacity-80">Grand entrances for men and women</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-pray text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Prayer Halls</h4>
+                            <p class="text-sm opacity-80">Separate prayer facilities</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-book text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Islamic Library</h4>
+                            <p class="text-sm opacity-80">Extensive collection and admin office</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-water text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Wudhu Facilities</h4>
+                            <p class="text-sm opacity-80">Ablution and shower facilities</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-utensils text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Kitchen & Cafeteria</h4>
+                            <p class="text-sm opacity-80">Food preparation and dining area</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-peace text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Ghusl Room</h4>
+                            <p class="text-sm opacity-80">Funeral preparation facilities</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-tree text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Child Supervision</h4>
+                            <p class="text-sm opacity-80">Secure children's supervision</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-dumbbell text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Gymnasium</h4>
+                            <p class="text-sm opacity-80">Expandable prayer space and sports</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start md:col-span-2">
+                        <i class="fas fa-parking text-isbc-gold text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Underground Parking</h4>
+                            <p class="text-sm opacity-80">Convenient parking for community members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parking Info -->
+            <div class="bg-isbc-gold/10 border-2 border-isbc-gold rounded-3xl p-8">
+                <h2 class="text-2xl font-bold text-isbc-navy mb-4"><i class="fas fa-parking text-isbc-gold mr-3"></i>Parking Information</h2>
+                <p class="text-gray-700 mb-4">During Ramadan and busy periods:</p>
+                <ul class="space-y-2 text-gray-700 mb-6">
+                    <li><i class="fas fa-check text-isbc-gold mr-2"></i>Follow volunteer directions</li>
+                    <li><i class="fas fa-check text-isbc-gold mr-2"></i>Do NOT park on Kingsway Ave or block neighbors</li>
+                    <li><i class="fas fa-check text-isbc-gold mr-2"></i>Use underground mosque parking</li>
+                    <li><i class="fas fa-check text-isbc-gold mr-2"></i>ECBC lot (paid) or Legion's City lot available</li>
+                </ul>
+                <p class="font-bold text-isbc-navy"><i class="fas fa-car mr-2"></i>Carpool & arrive early!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC) | Artwork by: Yahya Omer Othman</p>
+        </div>
+    </footer>
+</body>
+</html>

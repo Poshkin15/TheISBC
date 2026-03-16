@@ -1,0 +1,379 @@
+<!-- index.html - HOME PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid Al-Hidayah(ISBC) | Port Coquitlam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .geometric-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234A9B9B' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .nav-scrolled { background: rgba(30, 58, 76, 0.98); backdrop-filter: blur(10px); }
+        .hero-overlay { background: rgba(74, 155, 155, 0.85); }
+        .prayer-active { background: linear-gradient(135deg, #1E3A4C 0%, #4A9B9B 100%); color: white; }
+    </style>
+</head>
+<body class="font-body bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy font-semibold hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="services.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Services</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-isbc-navy absolute w-full left-0 top-full">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="text-isbc-gold">Home</a>
+                <a href="about.html">About</a>
+                <a href="prayer-times.html">Prayer Times</a>
+                <a href="school.html">School</a>
+                <a href="programs.html">Programs</a>
+                <a href="services.html">Services</a>
+                <a href="donate.html" class="text-isbc-gold">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://theisbc.ca/images/mosque-hero.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute inset-0 geometric-pattern opacity-30"></div>
+        
+        <div class="relative z-10 container mx-auto px-6 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 arabic-text">السلام عليكم</h1>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Welcome to Masjid Al-Hidayah</h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">Your center for religious, educational, social, and recreational activities serving Port Coquitlam and the Greater Vancouver Area since 1995</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="prayer-times.html" class="bg-isbc-gold text-isbc-navy px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-clock mr-2"></i>Today's Prayer Times
+                </a>
+                <a href="https://www.youtube.com/@masjidalhidayah-isbc2770" target="_blank" class="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all">
+                    <i class="fab fa-youtube mr-2"></i>Watch Live
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Prayer Times Strip -->
+    <section class="bg-isbc-navy text-white py-4 border-b-4 border-isbc-gold sticky top-0 z-40" id="prayer-strip">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-6 text-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs opacity-75 uppercase tracking-wide">Next Prayer</span>
+                    <span id="next-prayer-name" class="font-bold text-isbc-gold text-lg">Loading...</span>
+                </div>
+                <div class="text-2xl font-mono font-bold" id="countdown">00:00:00</div>
+                <div class="hidden md:flex gap-4 text-sm">
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Fajr <strong id="fajr-time">--:--</strong></span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Dhuhr <strong id="dhuhr-time">--:--</strong></span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Asr <strong id="asr-time">--:--</strong></span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Maghrib <strong id="maghrib-time">--:--</strong></span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Isha <strong id="isha-time">--:--</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-20 geometric-pattern bg-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-4xl font-bold text-isbc-navy mb-6">Welcome to Masjid Al-Hidayah (ISBC)</h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">Your center for religious, educational, social, and recreational activities in Port Coquitlam.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Port Coquitlam</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Coquitlam</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Port Moody</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Pitt Meadows</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">New Westminster</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Burnaby</h3>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 text-center">
+                    <i class="fas fa-mosque text-4xl text-isbc-teal mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">Maple Ridge</h3>
+                </div>
+                <div class="bg-isbc-gold/20 rounded-2xl p-6 text-center border-2 border-isbc-gold">
+                    <i class="fas fa-heart text-4xl text-isbc-gold mb-3"></i>
+                    <h3 class="font-bold text-isbc-navy">And More</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sections -->
+    <section class="py-20 bg-isbc-light">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- School -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-48 bg-isbc-teal flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-6xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-isbc-navy mb-3">Islamic School</h3>
+                        <p class="text-gray-600 mb-4">Weekend programs for ages 5-17. Registration now open for 2025-2026.</p>
+                        <a href="school.html" class="text-isbc-teal font-bold hover:text-isbc-navy">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Prayer Times -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-48 bg-isbc-navy flex items-center justify-center">
+                        <i class="fas fa-clock text-6xl text-isbc-gold"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-isbc-navy mb-3">Prayer Times</h3>
+                        <p class="text-gray-600 mb-4">Accurate prayer times for Port Coquitlam. Jumu'ah at 12:40 PM.</p>
+                        <a href="prayer-times.html" class="text-isbc-teal font-bold hover:text-isbc-navy">View Schedule →</a>
+                    </div>
+                </div>
+
+                <!-- YouTube -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-48 bg-red-600 flex items-center justify-center">
+                        <i class="fab fa-youtube text-6xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-isbc-navy mb-3">Live & Recorded</h3>
+                        <p class="text-gray-600 mb-4">Watch lectures, Khutbahs, and live prayers on our YouTube channel.</p>
+                        <a href="https://www.youtube.com/@masjidalhidayah-isbc2770" target="_blank" class="text-red-600 font-bold hover:text-red-700">Subscribe →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements / Posts -->
+    <section class="py-20 bg-white geometric-pattern">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-isbc-navy mb-6">Announcements</h2>
+
+            <div class="bg-isbc-light rounded-3xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-isbc-navy mb-4">Zakat al-Fitr Collection</h3>
+                <p class="text-gray-700 mb-4 leading-relaxed">Masjid Al-Hidayah is collecting <strong>Zakat-al-Fitr</strong> on the 20th of Ramadan and will be distributing it in the form of grain food locally, inshaAllah.</p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>The dollar value is set to be <strong>$15.00 per person</strong>.</li>
+                    <li>The last day we will accept Zakat-al-Fitr is <strong>Ramadan 29th</strong>.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If you would like us to distribute Zakat-al-Fitr for you, please donate online using debit/credit card:</p>
+                <a href="https://www.zeffy.com/en-CA/donation-form/zakat-el-fitr-fitrana" target="_blank" class="inline-block bg-isbc-gold text-isbc-navy font-bold px-8 py-4 rounded-full hover:bg-isbc-teal hover:text-white transition-all">Donate Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-isbc-navy text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <img src="isbc-logo.png" alt="ISBC" class="h-16 mb-4 bg-white rounded-lg p-2">
+                    <p class="text-gray-300 text-sm">Registered Charity No. 870635968RR0001</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-isbc-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="prayer-times.html" class="hover:text-white">Prayer Times</a></li>
+                        <li><a href="school.html" class="hover:text-white">School Programs</a></li>
+                        <li><a href="donate.html" class="hover:text-white">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-isbc-gold">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>2626 Kingsway Ave, Port Coquitlam, BC</li>
+                        <li><i class="fas fa-phone mr-2"></i>604-945-1885</li>
+                        <li><i class="fas fa-envelope mr-2"></i>admin@theisbc.ca</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-isbc-gold">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/alhidayahmosque/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-isbc-gold hover:text-isbc-navy transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@masjidalhidayah-isbc2770" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/CbQ4buMO4PUK0Fr7lDVvv0" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 Masjid Al-Hidayah (ISBC) | Artwork by: Yahya Omer Othman</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Navigation scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Accurate Prayer Countdown (auto-updates daily via API)
+        const prayerTimes = {
+            fajr: '--:--',
+            sunrise: '--:--',
+            dhuhr: '--:--',
+            asr: '--:--',
+            maghrib: '--:--',
+            isha: '--:--',
+        };
+
+        function formatTimeLabel(timeStr) {
+            // API returns times like "05:19" or "05:19 (PST)"
+            return timeStr.split(' ')[0];
+        }
+
+        function setScheduleLabels() {
+            document.getElementById('fajr-time').textContent = prayerTimes.fajr;
+            document.getElementById('dhuhr-time').textContent = prayerTimes.dhuhr;
+            document.getElementById('asr-time').textContent = prayerTimes.asr;
+            document.getElementById('maghrib-time').textContent = prayerTimes.maghrib;
+            document.getElementById('isha-time').textContent = prayerTimes.isha;
+        }
+
+        function timeStringToSeconds(timeStr) {
+            const [hours, minutes] = formatTimeLabel(timeStr).split(':').map(Number);
+            return hours * 3600 + minutes * 60;
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const currentTime = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+
+            const prayers = [
+                { name: 'Fajr', time: timeStringToSeconds(prayerTimes.fajr) },
+                { name: 'Sunrise', time: timeStringToSeconds(prayerTimes.sunrise) },
+                { name: 'Dhuhr', time: timeStringToSeconds(prayerTimes.dhuhr) },
+                { name: 'Asr', time: timeStringToSeconds(prayerTimes.asr) },
+                { name: 'Maghrib', time: timeStringToSeconds(prayerTimes.maghrib) },
+                { name: 'Isha', time: timeStringToSeconds(prayerTimes.isha) },
+            ];
+
+            let nextPrayer = prayers[0];
+            let nextPrayerTime = prayers[0].time + 24 * 3600; // Tomorrow's Fajr
+
+            for (let i = 0; i < prayers.length; i++) {
+                if (currentTime < prayers[i].time) {
+                    nextPrayer = prayers[i];
+                    nextPrayerTime = prayers[i].time;
+                    break;
+                }
+            }
+
+            let diff = nextPrayerTime - currentTime;
+            const hours = Math.floor(diff / 3600);
+            diff %= 3600;
+            const minutes = Math.floor(diff / 60);
+            const seconds = diff % 60;
+
+            document.getElementById('next-prayer-name').textContent = nextPrayer.name;
+            document.getElementById('countdown').textContent =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        async function fetchPrayerTimes() {
+            try {
+                // Port Coquitlam coordinates
+                const lat = 49.2636;
+                const lon = -122.7973;
+                const res = await fetch(`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lon}&method=2`);
+                const data = await res.json();
+                if (data.code !== 200 || !data.data || !data.data.timings) throw new Error('Invalid response');
+
+                prayerTimes.fajr = formatTimeLabel(data.data.timings.Fajr);
+                prayerTimes.sunrise = formatTimeLabel(data.data.timings.Sunrise);
+                prayerTimes.dhuhr = formatTimeLabel(data.data.timings.Dhuhr);
+                prayerTimes.asr = formatTimeLabel(data.data.timings.Asr);
+                prayerTimes.maghrib = formatTimeLabel(data.data.timings.Maghrib);
+                prayerTimes.isha = formatTimeLabel(data.data.timings.Isha);
+
+                setScheduleLabels();
+            } catch (err) {
+                console.warn('Failed to fetch prayer times, using fallback values.', err);
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        // Refresh prayer times once per day (and on load)
+        fetchPrayerTimes();
+        setInterval(fetchPrayerTimes, 1000 * 60 * 60 * 6); // every 6 hours
+        updateCountdown();
+    </script>
+</body>
+</html>

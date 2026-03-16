@@ -1,0 +1,166 @@
+<!-- donate.html - DONATION PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family+Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .donation-card {
+            background: linear-gradient(135deg, #1E3A4C 0%, #4A9B9B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .donation-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="donate.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-isbc-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/islamic-geometric.png')]"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Support Masjid Al-Hidayah</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">"Spend in charity, O son of Adam, and I will spend on you." - Saheeh Al-Bukhari and Muslim</p>
+            <p class="text-isbc-gold mt-4 font-bold">Jazakum Allahu Khairan for your continued support</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-isbc-light">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Iftar Donation -->
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="h-48 bg-[url('https://theisbc.ca/images/iftar.jpg')] bg-cover bg-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <span class="bg-isbc-gold text-isbc-navy px-3 py-1 rounded-full text-sm font-bold">Ramadan 1447</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold text-isbc-navy mb-4">Ramadan Iftar</h2>
+                        <p class="text-gray-600 mb-6">Every contribution brings us together to share in the blessings of Ramadan. Community Iftar every Friday & Saturday.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-teal mr-3"></i>Feed the fasting</div>
+                            <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-teal mr-3"></i>Community building</div>
+                            <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-teal mr-3"></i>Tax receipt provided</div>
+                        </div>
+
+                        <a href="https://www.zeffy.com/en-CA/donation-form/ramadan-iftar-gatherings" target="_blank" class="block w-full bg-isbc-teal text-white text-center py-4 rounded-xl font-bold text-lg hover:bg-isbc-navy transition-all">
+                            Donate via Zeffy <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- General Masjid Donation -->
+                <div class="donation-card rounded-3xl shadow-2xl overflow-hidden text-white relative">
+                    <div class="relative z-10 p-8">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-mosque text-5xl text-isbc-gold mr-4"></i>
+                            <div>
+                                <h2 class="text-3xl font-bold">Masjid Appeal</h2>
+                                <p class="opacity-90">Support House of Allah</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-6 opacity-90">Your donation supports masjid expenses, zakat-el-mal, fidyah, food bank, da'wa, halaqat, and maintenance.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Masjid operations & maintenance</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Food Bank initiative</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Educational programs</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Community services</div>
+                        </div>
+
+                        <div class="bg-white/10 rounded-xl p-4 mb-6">
+                            <h4 class="font-bold mb-2 text-isbc-gold">Other Ways to Donate:</h4>
+                            <ul class="text-sm space-y-1 opacity-90">
+                                <li>• Pre-Authorized Debit</li>
+                                <li>• Interac E-Transfer</li>
+                                <li>• In-person at mosque</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://www.paypal.com/donate?hosted_button_id=PX3FLS6CWSXBA" target="_blank" class="block w-full bg-isbc-gold text-isbc-navy text-center py-4 rounded-xl font-bold text-lg hover:bg-white transition-all">
+                            Donate via PayPal <i class="fab fa-paypal ml-2"></i>
+                        </a>
+                        
+                        <p class="text-xs text-center mt-4 opacity-75">Charity No. 870635968RR0001</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Hadith -->
+            <div class="max-w-2xl mx-auto mt-16 text-center">
+                <div class="bg-white rounded-3xl p-8 shadow-lg border-l-4 border-isbc-gold">
+                    <i class="fas fa-quote-left text-3xl text-isbc-gold mb-4"></i>
+                    <p class="text-xl arabic-text text-isbc-navy mb-4">"Whoever builds a mosque for Allah, Allah will build for him a house in Paradise."</p>
+                    <p class="text-gray-600">— Sahih Bukhari & Muslim</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!-- services.html - SERVICES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family+Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="services.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">Services</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-isbc-navy text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Services & Facilities</h1>
+            <p class="text-xl opacity-90">Comprehensive services for our community</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Religious Services -->
+            <h2 class="text-3xl font-bold text-isbc-navy mb-8"><i class="fas fa-hands text-isbc-teal mr-3"></i>Religious Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-question-circle text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Shariah Consultations</h3>
+                    <p class="text-gray-600 text-sm">Fatwas and religious guidance from qualified scholars.</p>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-ring text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Marriage & Divorce</h3>
+                    <p class="text-gray-600 text-sm">Marriage contract registration and divorce proceedings.</p>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-file-contract text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Contract Services</h3>
+                    <p class="text-gray-600 text-sm">Sale and debt contracts according to Islamic principles.</p>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-users text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Family Consultations</h3>
+                    <p class="text-gray-600 text-sm">Private counseling for families.</p>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-female text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Women's Consultations</h3>
+                    <p class="text-gray-600 text-sm">Private consultations for sisters.</p>
+                </div>
+                <div class="bg-isbc-light rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <i class="fas fa-book text-4xl text-isbc-teal mb-4"></i>
+                    <h3 class="text-xl font-bold text-isbc-navy mb-2">Islamic Library</h3>
+                    <p class="text-gray-600 text-sm">Extensive collection of Islamic literature and resources.</p>
+                </div>
+            </div>
+
+            <!-- Sports & Activities -->
+            <h2 class="text-3xl font-bold text-isbc-navy mb-8"><i class="fas fa-running text-isbc-gold mr-3"></i>Sports & Activities</h2>
+            
+            <!-- Karate -->
+            <div class="bg-white border-2 border-isbc-navy/10 rounded-3xl p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-isbc-navy mb-4">Karate Academy</h3>
+                        <p class="text-gray-600 mb-4">Professional martial arts training for all ages.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center bg-isbc-light p-3 rounded-lg">
+                                <span><i class="fas fa-child mr-2 text-isbc-teal"></i>Kids (4-12)</span>
+                                <span class="font-bold">5:30 - 6:30 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-pink-50 p-3 rounded-lg">
+                                <span><i class="fas fa-female mr-2 text-pink-500"></i>Sisters (13+)</span>
+                                <span class="font-bold">5:30 - 6:30 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-blue-50 p-3 rounded-lg">
+                                <span><i class="fas fa-male mr-2 text-blue-500"></i>Brothers (13+)</span>
+                                <span class="font-bold">6:30 - 7:30 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-isbc-gold/10 p-4 rounded-xl mb-4">
+                            <p class="text-sm"><strong>Coaches:</strong> Br. Atef Elshafie (5th Dan) & Sr. Sama Elshafie (Black Belt)</p>
+                            <p class="text-sm mt-2"><strong>Fee:</strong> $90/month | <strong>Sibling Discount:</strong> $10 off</p>
+                        </div>
+
+                        <a href="https://wa.me/16043382376" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all">
+                            <i class="fab fa-whatsapp mr-2"></i>604-338-2376
+                        </a>
+                        <span class="ml-4 text-sm text-gray-500">Free Trial Available</span>
+                    </div>
+                    <div class="bg-isbc-navy/5 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-fist-raised text-9xl text-isbc-navy/20"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soccer -->
+            <div class="bg-isbc-teal rounded-3xl p-8 text-white mb-8">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-futbol text-5xl text-isbc-gold mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Soccer Team (16+)</h3>
+                        <p>Competes in Champions Muslim League (April-June)</p>
+                    </div>
+                </div>
+                <p class="opacity-90 mb-4">Weekly training + weekend games</p>
+                <a href="https://wa.me/16043382376" class="inline-block bg-white text-isbc-teal px-6 py-2 rounded-full font-bold hover:bg-isbc-gold transition-all">Contact: 604-338-2376</a>
+            </div>
+
+            <!-- Multipurpose Hall -->
+            <div class="bg-isbc-light rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-isbc-navy mb-4"><i class="fas fa-building text-isbc-teal mr-3"></i>Multipurpose Hall & Gymnasium</h3>
+                <p class="text-gray-600 mb-6">Available for various community events and activities:</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-basketball-ball text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Sports</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-heart text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Weddings</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-handshake text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Meetings</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-chalkboard-teacher text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Seminars</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-hands-helping text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Food Bank</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl text-center">
+                        <i class="fas fa-users text-3xl text-isbc-teal mb-2"></i>
+                        <p class="font-bold text-isbc-navy">Gatherings</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!-- school.html - SCHOOL PROGRAMS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Programs | Masjid Al-Hidayah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family+Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'isbc-teal': '#4A9B9B',
+                        'isbc-navy': '#1E3A4C',
+                        'isbc-gold': '#D4AF37',
+                        'isbc-light': '#E8F4F4',
+                    },
+                    fontFamily: {
+                        'arabic': ['Amiri', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white text-isbc-navy py-3 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="isbc-logo.png" alt="ISBC Logo" class="h-12">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Home</a>
+                <a href="about.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">About</a>
+                <a href="prayer-times.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Prayer Times</a>
+                <a href="school.html" class="text-isbc-navy text-isbc-gold font-semibold hover:text-isbc-gold transition-colors">School</a>
+                <a href="programs.html" class="text-isbc-navy hover:text-isbc-gold transition-colors">Programs</a>
+                <a href="donate.html" class="bg-isbc-gold text-isbc-navy px-6 py-2 rounded-full font-bold hover:bg-isbc-teal hover:text-white transition-all">Donate</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-isbc-navy">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 bg-isbc-navy text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Islamic School Programs</h1>
+            <p class="text-xl opacity-90">2025-2026 Academic Year</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Weekend Islamic School -->
+            <div class="bg-isbc-light rounded-3xl p-8 md:p-12 mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="bg-isbc-teal text-white px-4 py-1 rounded-full text-sm font-bold">Ages 5-12</span>
+                        <h2 class="text-3xl font-bold text-isbc-navy mt-4 mb-4">Al-Hidayah Islamic School</h2>
+                        <p class="text-gray-700 mb-6 text-lg">Give your child the gift of faith, knowledge, and strength on weekends. Our program offers a unique blend of spiritual learning and active engagement.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start bg-white p-4 rounded-xl">
+                                <i class="fas fa-book-quran text-isbc-teal text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-isbc-navy">Qur'an & Tajweed</h4>
+                                    <p class="text-sm text-gray-600">Reading, memorization, and perfecting recitation</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-white p-4 rounded-xl">
+                                <i class="fas fa-graduation-cap text-isbc-teal text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-isbc-navy">Islamic Studies</h4>
+                                    <p class="text-sm text-gray-600">Building a strong moral compass and character</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-white p-4 rounded-xl">
+                                <i class="fas fa-language text-isbc-teal text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-isbc-navy">Arabic Language</h4>
+                                    <p class="text-sm text-gray-600">Foundational skills for deeper understanding</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-white p-4 rounded-xl">
+                                <i class="fas fa-running text-isbc-teal text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-isbc-navy">Physical Education</h4>
+                                    <p class="text-sm text-gray-600">Building discipline, confidence, and well-being</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Schedule</p>
+                                    <p class="font-bold text-isbc-navy text-lg">Saturdays & Sundays</p>
+                                    <p class="text-isbc-teal font-bold">10:00 AM - 2:00 PM</p>
+                                </div>
+                                <a href="https://www.zeffy.com/en-CA/ticketing/al-hidayah-islamic-school-2025--2026" target="_blank" class="bg-isbc-gold text-isbc-navy px-8 py-3 rounded-full font-bold hover:bg-isbc-navy hover:text-white transition-all">
+                                    Register Now
+                                </a>
+                            </div>
+                            <a href="https://www.zeffy.com/en-CA/ticketing/al-hidayiah-shop" target="_blank" class="text-isbc-teal text-sm hover:underline">
+                                <i class="fas fa-shopping-bag mr-1"></i>Request School Books
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-isbc-teal/10 rounded-3xl p-8 text-center">
+                        <i class="fas fa-school text-9xl text-isbc-teal opacity-50"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- El Kutab Schools -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Girls -->
+                <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 border-2 border-pink-200">
+                    <span class="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold">Girls 13-17 Years</span>
+                    <h2 class="text-2xl font-bold text-isbc-navy mt-4 mb-4">El Kutab School</h2>
+                    <p class="text-gray-600 mb-6">Designed for youth to grow in faith, knowledge, and character. A community where your youth will thrive.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Qur'an Reading & Memorization</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Expert Tajweed Instruction</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Arabic Language</li>
+                    </ul>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <p class="text-sm text-gray-500">Schedule</p>
+                        <p class="font-bold text-isbc-navy">Sundays 10:00 AM - 2:00 PM</p>
+                    </div>
+                    <a href="https://www.zeffy.com/en-CA/ticketing/al-hidayah-islamic-school-2025-2026-girls13-to-17-years" target="_blank" class="block text-center bg-isbc-navy text-white py-3 rounded-xl font-bold hover:bg-isbc-teal transition-all">Register Now</a>
+                </div>
+
+                <!-- Boys -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 border-2 border-blue-200">
+                    <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">Boys 13-17 Years</span>
+                    <h2 class="text-2xl font-bold text-isbc-navy mt-4 mb-4">El Kutab School</h2>
+                    <p class="text-gray-600 mb-6">Designed for youth to grow in faith, knowledge, and character. A community where your youth will thrive.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Qur'an Reading & Memorization</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Expert Tajweed Instruction</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check-circle text-isbc-gold mr-3"></i>Arabic Language</li>
+                    </ul>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <p class="text-sm text-gray-500">Schedule</p>
+                        <p class="font-bold text-isbc-navy">Sundays 10:00 AM - 2:00 PM</p>
+                    </div>
+                    <a href="https://www.zeffy.com/en-CA/ticketing/al-hidayah-islamic-school-2025-2026-boys-13-to-17-years" target="_blank" class="block text-center bg-isbc-navy text-white py-3 rounded-xl font-bold hover:bg-isbc-teal transition-all">Register Now</a>
+                </div>
+            </div>
+
+            <!-- Excelminds Academy -->
+            <div class="bg-isbc-navy rounded-3xl p-8 md:p-12 text-white">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-brain text-5xl text-isbc-gold mr-4"></i>
+                    <div>
+                        <h2 class="text-3xl font-bold">Excelminds Academy</h2>
+                        <p class="opacity-90">Programs from Age 3 to 18 • Cambridge Curriculum</p>
+                        <a href="https://excelminds.ca/programs" target="_blank" class="text-isbc-gold text-sm hover:underline">excelminds.ca/programs</a>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-child text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Early Education</h3>
+                        <p class="text-sm opacity-80 mb-4">Ages 3-5</p>
+                        <ul class="text-sm space-y-1 opacity-80 mb-4">
+                            <li>• English & Mathematics</li>
+                            <li>• Arabic & Islamic Studies</li>
+                        </ul>
+                        <div class="border-t border-white/20 pt-4 space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Mon-Fri 9AM-2PM</span>
+                                <span class="font-bold text-isbc-gold">$400/mo</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekends 10AM-2PM</span>
+                                <span class="font-bold text-isbc-gold">$150/mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-laptop text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Home/Online Tutoring</h3>
+                        <p class="text-sm opacity-80 mb-4">Grades 1-7</p>
+                        <ul class="text-sm space-y-1 opacity-80 mb-4">
+                            <li>• Structured support</li>
+                            <li>• Homeschooling guidance</li>
+                        </ul>
+                        <div class="border-t border-white/20 pt-4">
+                            <p class="text-sm">2 days/week, 5 hours/day</p>
+                            <p class="text-2xl font-bold text-isbc-gold">$150/mo*</p>
+                            <p class="text-xs">*Limited Time Offer</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <i class="fas fa-calculator text-4xl text-isbc-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">English & Math</h3>
+                        <p class="text-sm opacity-80 mb-4">Grades 8-12</p>
+                        <ul class="text-sm space-y-1 opacity-80 mb-4">
+                            <li>• Homework help</li>
+                            <li>• Cambridge curriculum</li>
+                        </ul>
+                        <div class="border-t border-white/20 pt-4 space-y-1">
+                            <div class="flex justify-between text-sm">
+                                <span>1 Subject</span>
+                                <span class="font-bold">$200/mo</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Both Subjects</span>
+                                <span class="font-bold text-isbc-gold">$300/mo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-isbc-navy text-white pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2026 Masjid Al-Hidayah (ISBC)</p>
+        </div>
+    </footer>
+</body>
+</html>
